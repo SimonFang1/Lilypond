@@ -1,0 +1,3 @@
+[submodule "MusicScore"]
+	path = MusicScore
+	url = https://github.com/SimonFang1/MusicScore.git
