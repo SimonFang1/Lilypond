@@ -1,4 +1,6 @@
-*.mid
-*.midi
 *.pdf
 *.ps
+*.midi
+*.mid
+*.log
+*~
