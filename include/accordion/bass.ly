@@ -10,20 +10,23 @@ MakeBass =
     \new Voice {
       <<
       \tag #'layout {\UpsideRange{\extractNote #1 $chordPart }}
-      \tag #'midi {\UpsideRange $chordPart }
-      {\DownsideRange $rootPart }
-      \tag #'(layout markchord) {
+      \tag #'layout {\DownsideRange $rootPart }
+      \tag #'chordname {
         \new ChordNames {
+          \set noChordSymbol = #(make-simple-markup "")
           \set chordChanges = ##t
           $chordPart
         }
       }
-      \tag #'(layout markchord) {
+      \tag #'chordroot {
         \new ChordNames {
+          \set noChordSymbol = #(make-simple-markup "")
           \set chordChanges = ##t
           $rootPart
         }
       }
+      \tag #'midi {\transpose c c, \UpsideRange $chordPart }
+      \tag #'midi {\transpose c c, \DownsideRange $rootPart }
       >>
     }
   #})

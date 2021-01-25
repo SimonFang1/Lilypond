@@ -59,7 +59,7 @@ music = \new GrandStaff <<
 >>
 
 \score {
-  \keepWithTag #'(layout markchord) \music
+  \keepWithTag #'(layout chordname chordroot) \music
   \layout{}
 }
 
